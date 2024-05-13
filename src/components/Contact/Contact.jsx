@@ -8,7 +8,7 @@ export default function Contact({data:{name,number,id},onDelete}) {
             <p className={css.p}><FaUser className={css.icon} />{name}</p>
             <p className={css.p}><FaPhone className={css.icon} />{number}</p>
             </div>
-            <button className={css.btn} onClick={()=>onDelete(id)}>Delete</button>
+            <button  onClick={()=>onDelete(id)}>Delete</button>
         </>
        
     )

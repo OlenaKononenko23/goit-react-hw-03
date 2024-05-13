@@ -32,16 +32,16 @@ export default function ContactForm({contacts, setContacts}) {
 
     return (
         <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={contactFormSchema}>
-            <Form>
-                <label htmlFor={nameFieldId}>Name</label>
-                <Field type="text" name="name" id={nameFieldId} />
-                <ErrorMessage name="name" component="div" />
+            <Form className={css.form}>
+                <label className={css.label} htmlFor={nameFieldId}>Name</label>
+                <Field className={css.input} type="text" name="name" id={nameFieldId} />
+                <ErrorMessage className={css.error} name="name" component="div" />
                 
-                <label htmlFor={telFieldId}>Number</label>
-                <Field type="tel" name="number" id={telFieldId} />
-                <ErrorMessage name="number" component="div" />
+                <label className={css.label} htmlFor={telFieldId}>Number</label>
+                <Field className={css.input} type="tel" name="number" id={telFieldId} />
+                <ErrorMessage className={css.error} name="number" component="div" />
 
-				<button type="submit">Add contact</button>
+				<button className={css.btn} type="submit">Add contact</button>
 			</Form>
         </Formik>
     );
