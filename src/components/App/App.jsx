@@ -4,6 +4,7 @@ import initialContacts from '../../initialContacts.json';
 // import { FaBeer } from 'react-icons/fa';
 import ContactList from '../ContactList/ContactList';
 import SearchBox from '../SearchBox/SearchBox';
+import ContactForm from '../ContactForm/ContactForm';
 import css from './App.module.css';
 
 export default function App() {
@@ -23,7 +24,7 @@ export default function App() {
   return (
     <>
       <h1 className={css.h1}>Phonebook</h1>
-      {/* <ContactForm />*/}
+      <ContactForm />
       <SearchBox value={search} onSearch={setSearch} /> 
       <ContactList contacts={visibleContacts} onDelete={deleteContact} />
     </>
